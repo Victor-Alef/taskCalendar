@@ -1,0 +1,6 @@
+<div *ngIf="activity">
+    <h2>{{ activity.title }}</h2>
+    <p>{{ activity.description }}</p>
+    <p>Date: {{ activity.date | date }}</p>
+    <button (click)="updateActivity()">Update Activity</button>
+  </div>  

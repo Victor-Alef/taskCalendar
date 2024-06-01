@@ -1,0 +1,7 @@
+<div>
+    <ul>
+      <li *ngFor="let task of tasks | taskFilter:filter" (click)="selectTask(task)">
+        {{ task.title }}
+      </li>
+    </ul>
+  </div>  

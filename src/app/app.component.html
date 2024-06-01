@@ -1,0 +1,10 @@
+<div>
+  <h1>Gerenciamento de Tarefas</h1>
+  <input type="text" placeholder="Buscar Tarefas" [(ngModel)]="searchText">
+  <task-list [tasks]="taskArray" [filter]="searchText" (onSelectTask)="handleTaskSelection($event)"></task-list>
+  <task-details [task]="selectedTask" (onUpdateTask)="updateTask($event)"></task-details>
+
+  <h1>Calendário de Atividades</h1>
+  <activity-calendar [startDate]="calendarStart" [endDate]="calendarEnd" [activities]="activityArray" (onSelectDate)="handleDateSelection($event)" (onSelectActivity)="handleActivitySelection($event)"></activity-calendar>
+  <activity-details [activity]="selectedActivity" (onUpdateActivity)="updateActivity($event)"></activity-details>
+</div>

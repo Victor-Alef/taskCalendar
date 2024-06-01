@@ -1,0 +1,12 @@
+<div>
+    <ng-container *ngFor="let date of getDates(startDate, endDate)">
+      <div (click)="selectDate(date)">
+        {{ date | date }}
+        <ul>
+          <li *ngFor="let activity of activities | activityFilter:date" (click)="selectActivity(activity)">
+            {{ activity.title }}
+          </li>
+        </ul>
+      </div>
+    </ng-container>
+  </div>  
